@@ -1,0 +1,42 @@
+.app { min-height: 100svh; display: flex; flex-direction: column; }
+.header {
+  background: #183153;
+  color: white;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand { font-size: 24px; font-weight: 700; }
+.menu, .sidebar-menu { list-style: none; padding: 0; margin: 0; }
+.menu { display: flex; gap: 24px; flex-wrap: wrap; }
+.menu a:hover { text-decoration: underline; }
+.app-layout { display: flex; flex: 1; }
+.sidebar { width: 220px; flex-shrink: 0; padding: 32px 24px; background: #e5edf7; }
+.sidebar h2 { font-size: 18px; margin: 0 0 20px; }
+.sidebar-menu { display: grid; gap: 8px; }
+.sidebar-menu a { display: block; padding: 12px; border-radius: 6px; }
+.sidebar-menu a:hover { background: #d2e0f2; }
+.main-content { flex: 1; min-width: 0; padding: 40px; }
+.main-content section {
+  background: white;
+  padding: 28px;
+  margin-bottom: 24px;
+  border: 1px solid #dde5ef;
+  border-radius: 10px;
+  scroll-margin-top: 24px;
+}
+.main-content h1 { margin: 0 0 16px; font-size: 32px; }
+.main-content h2 { margin: 0 0 12px; font-size: 24px; }
+.main-content p { margin: 0; }
+.footer { padding: 20px; text-align: center; background: #183153; color: white; }
+.footer p { margin: 0; font-size: 14px; }
+@media (max-width: 640px) {
+  .header { flex-direction: column; align-items: flex-start; padding: 20px; }
+  .app-layout { flex-direction: column; }
+  .sidebar { width: 100%; padding: 20px; }
+  .sidebar-menu { display: flex; flex-wrap: wrap; }
+  .main-content { padding: 20px; }
+  .main-content section { padding: 20px; }
+}
